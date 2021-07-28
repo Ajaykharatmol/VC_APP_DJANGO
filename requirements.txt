@@ -79,7 +79,7 @@ numpy==1.18.1
 oauthlib==3.0.1
 opencv-python
 packaging==20.4
-pandas==1.0.3
+pandas
 pandocfilters==1.4.2
 parso==0.7.0
 pep8==1.7.1
