@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+
+</head>
+
+
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  text-align: left;
+}
+
+.navbar a {
+  text-align: left;
+  float: left;
+  padding: 4px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+.topnav-right {
+  float: right;
+}
+a {
+    line-height: 1em;
+    display: inline-block;
+    text-decoration: none;
+    padding: 120px;
+    margin: 5px;
+}
+</style>
+<body>
+  <div class="topnav">
+  <div class="navbar">
+    <a class="" href="{% url "index" %}"><i class="fa fa-fw fa-" ></i> VC</a>
+
+    <div class="topnav-right">
+    <a class="" href="{% url "index" %}"><i class="fa fa-fw fa-home" ></i> Home</a> 
+    <a href="{% url "Current_Investors" %}"><i class="fa fa-fw fa-" ></i> Current_Investors</a>
+    <a href="{% url "Apply_for_Funding" %}"><i class="fa fa-fw fa-" style="margin: 5px"></i> Apply for Funding</a>
+    <a href="{% url "Pending_deals1" %}"><i class="fa fa-fw fa-" ></i> Pending deals</a>
+     
+    <a href="{% url "Notifications1" %}"><i class="fa fa-bell"  ></i> Notifications</a>
+
+    <a href="{% url "Profile1" %}"><i class="fa fa-user" ></i> Profile</a>
+    
+
+  </div>
+  </div>
+</div>
+</body>
+</html> 
+
+<body>
+
+
+
+
+    <section class=" container-fluid">
+        <section class="col-19 col-sm-17 col-md-17">
+
+            <form class="form-container">
+                <div>
+                    
+                    <p>&nbsp;</p> 
+                    <h3 style="text-align: center;">Pending Bids</h3>
+                    <hr>
+                    
+                    <p>&nbsp;</p> 
+                    <p>Winged bring god their. Which moving yielding shall i deep shall fill whose god a. Tree day, open. Multiply great had the third beginning lesser saying void, fruitful set lesser, unto all replenish you rule. Gathering earth the had she'd own morning it lesser you're divide fruitful him multiply can't own Second saw male male let grass green shall bearing appear set moved. Waters thing first, let behold sixth it our forth unto bring us fruit saw fly lesser kind brought lesser which deep. Us divided whose said appear wherein was green dry seasons he fifth upon him all firmament.</p>
+                    <p>&nbsp;</p> 
+            <p>&nbsp;</p> 
+                    
+                </div>
+                <table class="table" id="venListTableId">
+                    <thead>
+                        <tr>
+                          <th></th>
+                            <th scope="col">Type of Investor</th>
+                            <th scope="col">Name of investor</th>
+                            <th scope="col">Total amount bid</th>
+                            <th scope="col">Percentage</th>
+                            <th scope="col">No_of_shares</th>
+                            <th scope="col">Price per share</th>
+                            <th scope="col">Pre/Post money valuation</th>
+                            <th scope="col">Status</th>
+                            
+                        </tr>
+
+                        <tr>
+                            {% for d in depts %}
+                            <td height="100",col width="150">{{d.id}}</td>
+  <td height="100",col width="150">{{d.Type_of_Investor }}</td>
+  <td height="100",col width="150">{{d.Name_of_investor}}</td>
+  <td height="100",col width="150">{{d.Total_amount_bid}}</td>
+  <td height="100",col width="150">{{d.Percentage}}</td>
+  <td height="100",col width="150">{{d.No_of_shares}}</td>
+  <td height="100",col width="150">{{d.Price_per_share}}</td>
+  <td height="100",col width="150">{{d.money_valuation }}</td>
+                            
+                <td height="100",col width="150"><a href="bids" class="btn btn-info" role="button">Pending</a></td>
+                               </tr>
+                              {% endfor%}
+                            </table>
+                            <p>&nbsp;</p> 
+                            
+
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                
+                
+            </form>
+
+        </section>
+    </section>
+
+
+
+
+
+</body>
+</html>

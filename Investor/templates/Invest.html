@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+
+</head>
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  text-align: left;
+}
+
+.navbar a {
+  text-align: left;
+  float: left;
+  padding: 4px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+.topnav-right {
+  float: right;
+}
+
+</style>
+<body>
+  <div class="topnav">
+  <div class="navbar">
+    <a class="" href="{% url "index" %}"><i class="fa fa-fw fa-" style="margin: 5px"></i> VC</a>
+
+    <div class="topnav-right">
+    <a class="" href="{% url "index" %}"><i class="fa fa-fw fa-home" ></i> Home</a> 
+    
+    <a href="{% url "Pending_deals" %}"><i class="fa fa-fw fa-" style="margin: 5px"></i> Pending deals</a>
+     
+    <a href="{% url "Notifications" %}"><i class="fa fa-bell" style="margin: 5px"></i> Notifications</a>
+
+    <a href="{% url "Profile" %}"><i class="fa fa-user" style="margin: 5px"></i> Profile</a>
+    
+
+  </div>
+  </div>
+</div>
+</body>
+</html> 
+
+
+<body>
+
+
+    <section class=" container-fluid">
+        <section class="col-19 col-sm-17 col-md-17">
+
+            <form class="form-container">
+                  
+                <head>
+                    <style>
+                      table, th, td {
+                        border: 1px solid black;
+                      }
+                      
+                    </style>
+                 </head>
+                    <body>
+                      
+                      <p>&nbsp;</p> 
+                      
+
+
+
+
+                <div>
+                    
+                    <p>&nbsp;</p> 
+                    
+                    <body>
+                      
+                      <p>&nbsp;</p> 
+                    <h1 style="text-align: center;">Invest In Startups</h1>
+                      <hr>
+                    </body>
+                    </html>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                    <!DOCTYPE html>
+                    <html>
+                    <style>
+                    .filterDiv {
+                      float: left;
+                      background-color: #2196F3;
+                      color: #ffffff;
+                      width: 100px;
+                      line-height: 100px;
+                      text-align: center;
+                      margin: 2px;
+                      display: none;
+                    }
+                    
+                    .show {
+                      display: block;
+                    }
+                    
+                    .container {
+                      margin-top: 20px;
+                      overflow: hidden;
+                    }
+                    
+                    /* Style the buttons */
+                    .btn {
+                      border: none;
+                      outline: none;
+                      padding: 12px 16px;
+                      background-color: #f1f1f1;
+                      cursor: pointer;
+                    }
+                    
+                    .btn:hover {
+                      background-color: #ddd;
+                    }
+                    
+                    .btn.active {
+                      background-color: #666;
+                      color: white;
+                    }
+                    </style>
+                    <body>
+                    
+                    <h2></h2>
+                    
+                    <div id="myBtnContainer">
+                      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                      <button class="btn" onclick="filterSelection('cars')"> Filter By Sector</button>
+                      <button class="btn" onclick="filterSelection('animals')"> Filter Funding Stage </button>
+                      <button class="btn" onclick="filterSelection('fruits')"> Filter By Active/Inactive</button>
+                      
+                    </div>
+                    
+                    <div class="container">
+                      <div style="overflow-x:auto;">
+        
+                        
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+          text-align: left;
+        }
+        table {
+          
+        
+          border-spacing: 1em .5em;
+          padding: 0 2em 1em 0;
+          border: 1px solid orange;
+        }
+        </style>
+        </head>
+        <body>
+        <table border="1" 
+        align="left"  style="width:15%">
+        
+          <tr><th>Name of Startup</th><td></td></tr>
+          <tr></tr><th>Amount raised </th><td></td></tr>
+          <tr></tr><th>Min. Bid amount</th><td></td></tr>
+          <tr></tr><th>Min. Valuation </th><td></td></tr>
+          <tr></tr><th>No. of days Left</th><td></td></tr>
+          <tr></tr><th><a  href="{% url "Invest1" %}" role="button">Sector</a></th><td></td></tr>
+        </table>
+        <p>&nbsp;</p> 
+        <table  border="1" 
+        align="right"  style="width:15%">
+          <tr><th>Name of Startup</th><td></td></tr>
+          <tr></tr><th>Amount raised </th><td></td></tr>
+          <tr></tr><th>Min. Bid amount</th><td></td></tr>
+          <tr></tr><th>Min. Valuation </th><td></td></tr>
+          <tr></tr><th>No. of days Left</th><td></td></tr>
+          <tr></tr><th><a  href="{% url "Invest1" %}" role="button">Sector</a></th><td></td></tr>
+          </table>
+          <p>&nbsp;</p> 
+          <table  border="1" 
+          align="center"  style="width:15%">
+            <tr><th>Name of Startup</th><td></td></tr>
+            <tr></tr><th>Amount raised </th><td></td></tr>
+            <tr></tr><th>Min. Bid amount</th><td></td></tr>
+            <tr></tr><th>Min. Valuation </th><td></td></tr>
+            <tr></tr><th>No. of days Left</th><td></td></tr>
+            <tr></tr><th><a  href="{% url "Invest1" %}" role="button">Sector</a></th><td></td></tr>
+          </table>
+          <p>&nbsp;</p> 
+            <table border="1" 
+            align="left"  style="width:15%">
+              <tr><th>Name of Startup</th><td></td></tr>
+              <tr></tr><th>Amount raised </th><td></td></tr>
+              <tr></tr><th>Min. Bid amount</th><td></td></tr>
+              <tr></tr><th>Min. Valuation </th><td></td></tr>
+              <tr></tr><th>No. of days Left</th><td></td></tr>
+              <tr></tr><th><a  href="{% url "Invest1" %}" role="button">Sector</a></th><td></td></tr>
+            </table>
+            <p>&nbsp;</p> 
+              <table  border="1" 
+        align="right"  style="width:15%">
+          <tr><th>Name of Startup</th><td></td></tr>
+          <tr></tr><th>Amount raised </th><td></td></tr>
+          <tr></tr><th>Min. Bid amount</th><td></td></tr>
+          <tr></tr><th>Min. Valuation </th><td></td></tr>
+          <tr></tr><th>No. of days Left</th><td></td></tr>
+          <tr></tr><th><a  href="{% url "Invest1" %}" role="button">Sector</a></th><td></td></tr>
+        </table>
+        <p>&nbsp;</p> 
+          <table  border="1" 
+          align="center"  style="width:15%">
+            <tr><th>Name of Startup</th><td></td></tr>
+            <tr></tr><th>Amount raised </th><td></td></tr>
+            <tr></tr><th>Min. Bid amount</th><td></td></tr>
+            <tr></tr><th>Min. Valuation </th><td></td></tr>
+            <tr></tr><th>No. of days Left</th><td></td></tr>
+            <tr></tr><th><a  href="{% url "Invest1" %}" role="button">Sector</a></th><td></td></tr>
+          </table>
+          <p>&nbsp;</p> 
+            <table border="1" 
+            align="left"  style="width:15%">
+              <tr><th>Name of Startup</th><td></td></tr>
+              <tr></tr><th>Amount raised </th><td></td></tr>
+              <tr></tr><th>Min. Bid amount</th><td></td></tr>
+              <tr></tr><th>Min. Valuation </th><td></td></tr>
+              <tr></tr><th>No. of days Left</th><td></td></tr>
+              <tr></tr><th><a  href="{% url "Invest1" %}" role="button">Sector</a></th><td></td></tr>
+            </table>
+            <p>&nbsp;</p> 
+              <table  border="1" 
+        align="right"  style="width:15%">
+          <tr><th>Name of Startup</th><td></td></tr>
+          <tr></tr><th>Amount raised </th><td></td></tr>
+          <tr></tr><th>Min. Bid amount</th><td></td></tr>
+          <tr></tr><th>Min. Valuation </th><td></td></tr>
+          <tr></tr><th>No. of days Left</th><td></td></tr>
+          <tr></tr><th><a  href="{% url "Invest1" %}" role="button">Sector</a></th><td></td></tr>
+        </table>
+        <p>&nbsp;</p> 
+          <table  border="1" 
+          align="center"  style="width:15%">
+            <tr><th>Name of Startup</th><td></td></tr>
+            <tr></tr><th>Amount raised </th><td></td></tr>
+            <tr></tr><th>Min. Bid amount</th><td></td></tr>
+            <tr></tr><th>Min. Valuation </th><td></td></tr>
+            <tr></tr><th>No. of days Left</th><td></td></tr>
+            <tr></tr><th><a  href="{% url "Invest1" %}" role="button">Sector</a></th><td></td></tr>
+          </table>
+          <p>&nbsp;</p> 
+            <table border="1" 
+            align="left"  style="width:15%">
+              <tr><th>Name of Startup</th><td></td></tr>
+              <tr></tr><th>Amount raised </th><td></td></tr>
+              <tr></tr><th>Min. Bid amount</th><td></td></tr>
+              <tr></tr><th>Min. Valuation </th><td></td></tr>
+              <tr></tr><th>No. of days Left</th><td></td></tr>
+              <tr></tr><th><a  href="{% url "Invest1" %}" role="button">Sector</a></th><td></td></tr>
+            </table>
+            
+        </table>
+        </body>
+        </html>
+        
+        
+        
+        
+        
+        
+        
+        
+                       
+        
+        
+                      </div>
+                    
+                      
+                    </div>
+                    
+                    <script>
+                    filterSelection("all")
+                    function filterSelection(c) {
+                      var x, i;
+                      x = document.getElementsByClassName("filterDiv");
+                      if (c == "all") c = "";
+                      for (i = 0; i < x.length; i++) {
+                        w3RemoveClass(x[i], "show");
+                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                      }
+                    }
+                    
+                    function w3AddClass(element, name) {
+                      var i, arr1, arr2;
+                      arr1 = element.className.split(" ");
+                      arr2 = name.split(" ");
+                      for (i = 0; i < arr2.length; i++) {
+                        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                      }
+                    }
+                    
+                    function w3RemoveClass(element, name) {
+                      var i, arr1, arr2;
+                      arr1 = element.className.split(" ");
+                      arr2 = name.split(" ");
+                      for (i = 0; i < arr2.length; i++) {
+                        while (arr1.indexOf(arr2[i]) > -1) {
+                          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                        }
+                      }
+                      element.className = arr1.join(" ");
+                    }
+                    
+                    // Add active class to the current button (highlight it)
+                    var btnContainer = document.getElementById("myBtnContainer");
+                    var btns = btnContainer.getElementsByClassName("btn");
+                    for (var i = 0; i < btns.length; i++) {
+                      btns[i].addEventListener("click", function(){
+                        var current = document.getElementsByClassName("active");
+                        current[0].className = current[0].className.replace(" active", "");
+                        this.className += " active";
+                      });
+                    }
+                    </script>
+                    
+                    </body>
+                    </html>
+                              
+
+</body>
+</html>

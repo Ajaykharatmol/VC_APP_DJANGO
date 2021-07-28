@@ -1,0 +1,209 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+ 
+
+
+</head>
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  text-align: left;
+}
+
+.navbar a {
+  text-align: left;
+  float: left;
+  padding: 4px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+.topnav-right {
+  float: right;
+}
+
+</style>
+<body>
+  <div class="topnav">
+  <div class="navbar">
+    <a class="" href="{% url "index" %}"><i class="fa fa-fw fa-" style="margin: 5px"></i> VC</a>
+
+    <div class="topnav-right">
+    <a class="" href="{% url "index" %}"><i class="fa fa-fw fa-home" ></i> Home</a> 
+    <a href="{% url "Invest" %}"><i class="fa fa-fw fa-"></i> Invest</a>
+    <a href="{% url "Pending_deals" %}"><i class="fa fa-fw fa-" style="margin: 5px"></i> Pending deals</a>
+     
+    <a href="{% url "Notifications" %}"><i class="fa fa-bell" style="margin: 5px"></i> Notifications</a>
+
+    <a href="{% url "Profile" %}"><i class="fa fa-user" style="margin: 5px"></i> Profile</a>
+    
+
+  </div>
+  </div>
+</div>
+</body>
+</html> 
+
+<body>
+
+
+    <section class=" container-fluid">
+        <section class="col-19 col-sm-17 col-md-17">
+
+            <form class="form-container">
+                <div>
+                    
+                    <p>&nbsp;</p> 
+                    
+  <h3 style="text-align: center;">Name Of Company</h3>
+  <h5 font size="5" style="text-align: right;">Status : Pending</h5>
+     
+    <button class="accordion">Counter Offer</button>
+    <div class="panel">
+      <form method="POST" action="addpending">
+        {% csrf_token %}   
+      <p><table><tr><td>{{form|crispy}}</td></tr></table></p>
+      <input type="submit" class="btn btn-primary" value="submit"/>
+    </form>
+    </div>
+    <p>&nbsp;</p> 
+<button class="accordion">Massage from the Startup</button>
+<div class="panel">
+  <p>Fruitful of behold let had shall their signs blessed abundantly day heaven deep abundantly sixth for. Signs hath very kind said rule was doesn't. Let land third had days him to be from creature his from his. Kind replenish replenish, don't. They're so moving night third above fly, be lights stars behold moveth heaven appear one unto. Beginning us spirit. Set waters female. Whose third you're creepeth created. Land creature to Brought our shall called may own grass hath face doesn't let multiply all face earth. Forth rule he so have given our. Isn't spirit be divide. May our behold.</p>
+</div>
+<p>&nbsp;</p> 
+<button class="accordion">Revised Termsheet</button>
+<div class="panel">
+  <p>
+    {% load static %}
+  <embed src="{% static 'images/PDF1.pdf' %}" width="700px" height="600px" />
+  </p>
+</div>
+<p>&nbsp;</p> 
+<p> <a  role="button" class="btn btn-info">Accept Offer</a></p>
+      <p> <a  class="btn btn-info" href="{% url "Invest2" %}" role="button">Counter</a></p>
+
+      
+    </form>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+      </script>
+
+
+
+                
+                
+                
+                
+                
+                      
+                </body>
+                
+                </html>
+                
+            </form>
+
+        </section>
+    </section>
+
+
+
+
+</body>
+</html>

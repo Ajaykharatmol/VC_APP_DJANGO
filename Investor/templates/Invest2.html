@@ -1,0 +1,219 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+ 
+
+
+</head>
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  text-align: left;
+}
+
+.navbar a {
+  text-align: left;
+  float: left;
+  padding: 4px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+.topnav-right {
+  float: right;
+}
+
+</style>
+<body>
+  <div class="topnav">
+  <div class="navbar">
+    <a class="" href="{% url "index" %}"><i class="fa fa-fw fa-" style="margin: 5px"></i> VC</a>
+
+    <div class="topnav-right">
+    <a class="" href="{% url "index" %}"><i class="fa fa-fw fa-home" ></i> Home</a> 
+    <a href="{% url "Invest" %}"><i class="fa fa-fw fa-"></i> Invest</a>
+    <a href="{% url "Pending_deals" %}"><i class="fa fa-fw fa-" style="margin: 5px"></i> Pending deals</a>
+     
+    <a href="{% url "Notifications" %}"><i class="fa fa-bell" style="margin: 5px"></i> Notifications</a>
+
+    <a href="{% url "Profile" %}"><i class="fa fa-user" style="margin: 5px"></i> Profile</a>
+    
+
+  </div>
+  </div>
+</div>
+</body>
+</html> 
+
+<body>
+
+
+    <section class=" container-fluid">
+        <section class="col-19 col-sm-17 col-md-17">
+
+            <form class="form-container">
+                <div>
+                    
+                    <p>&nbsp;</p> 
+                    <h3 style="text-align: center;">Invest In Name Of Startup</h3>
+                    <hr>
+                    <button class="accordion">Investment</button>
+                    <div class="panel">
+                      <form method="POST" action="addInvestment">
+                        {% csrf_token %} 
+                      <p><table><tr><td>{{ Investment_Form|crispy}}</td></tr></table></p>
+                      <input type="submit" class="btn btn-primary" value="Submit"/>
+                    </form>
+                    </div>
+                    <p>&nbsp;</p> 
+                    <button class="accordion">Investor Details</button>
+                    <div class="panel">
+                      <form method="POST" action="addInvestor">
+                        {% csrf_token %} 
+                      <p><table><tr><td>{{ Investor_Form|crispy}}</td></tr></table></p>
+                      <input type="submit" class="btn btn-primary" value="Submit"/>
+                    </form>
+                
+                    </div>
+                    <p>&nbsp;</p> 
+                    <button class="accordion">Message to the startup</button>
+                    <div class="panel">
+                      
+                      <p>Can't, thing us under, cattle them. Void under make saw signs you're Of let man. Dominion face fifth darkness rule image lights set beast greater. Beginning meat together void let tree there seed female signs living land in open. Thing brought seed second moveth light. Replenish greater bring a so great night set waters gathered can't deep it so our one tree darkness said may darkness god. Abundantly god days sixth it moveth darkness meat. He deep abundantly them over divided greater fly fill to you, doesn't so can't stars dry won't rule without stars earth seas air moveth she'd.</p>
+                      
+                    </div>
+                    <p>&nbsp;</p> 
+                    <button class="accordion">Termsheet</button>
+                    <div class="panel">
+                      <p>
+                        {% load static %}
+                      <embed src="{% static 'images/PDF1.pdf' %}" width="700px" height="600px" />
+                      </p>
+                    </div>
+                    <p>&nbsp;</p>   
+                    <button class="accordion">Payment Detail</button>
+                    <div class="panel">
+                      <form method="POST" action="addbank">
+                        {% csrf_token %}   
+                      <p><table><tr><td>{{Account_Details_Form|crispy }}</td></tr></table></p>
+                      <input type="submit" class="btn btn-primary" value="Invest Now"/>
+                    </form>
+                    </div>
+                  
+                    <script>
+                      var acc = document.getElementsByClassName("accordion");
+                      var i;
+                      
+                      for (i = 0; i < acc.length; i++) {
+                        acc[i].addEventListener("click", function() {
+                          this.classList.toggle("active");
+                          var panel = this.nextElementSibling;
+                          if (panel.style.maxHeight) {
+                            panel.style.maxHeight = null;
+                          } else {
+                            panel.style.maxHeight = panel.scrollHeight + "px";
+                          } 
+                        });
+                      }
+                      </script>
+                
+                
+                
+                
+                
+                      
+                </body>
+                
+                </html>
+                
+            </form>
+
+        </section>
+    </section>
+
+
+
+
+</body>
+</html>

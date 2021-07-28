@@ -1,0 +1,166 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="project">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="author" content="vinayak sharma">
+
+  <title>{{title}}</title>
+
+
+  <!-- bootstrap file -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- bootstrap file-->
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- main css -->
+  <link rel="stylesheet" type="text/css" href="{% static "index.css" %}" />
+
+
+  <!-- message here -->
+
+  {% if messages %}
+  {% for message in messages %}
+
+  <script>
+    alert("{{ message }}");
+  </script>
+
+  {% endfor %}
+  {% endif %}
+
+  <!--_______________________________________________-->
+
+
+</head>
+
+<body class="container-fluid">
+
+
+  <header class="row">
+
+    <!-- navbar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" class="styleheader" href="{% url "index" %}">project</a>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNavBar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url "index" %}">Home</a></li>
+
+            {% if Investor.is_authenticated %}
+            <li><a href="{% url "logout" %}"><span class="glyphicon glyphicon-log-out"></span> &nbsp; Logout</a></li>
+            {% else %}
+            <li><a href="{% url "SignUpJoin" %}"><span class="glyphicon glyphicon-user"></span> &nbsp; Sign up</a></li>
+            <li><a href="{% url "login" %}"><span class="glyphicon glyphicon-log-in"></span> &nbsp; Log in</a></li>
+            {% endif %}
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <br/>
+  <br>
+  <br>
+  <style>
+ 
+  .left {
+  position: absolute;
+  float: left;
+  left: 50px;
+  width: 700px;
+  border: 3px solid #73AD21;
+  padding: 173px;
+  background-size: cover;
+  background-image:linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url(/static/images/.png);
+  color: aliceblue;
+}
+  </style>
+ 
+
+  <div class="container">
+    <div class="row">
+      <div class="left">
+      <div class="col-xs-offset-2 col-xs-8">
+        <h1 style="color:blue;font-size:40px;" class="serif">I AM A STARTUP</h1>
+        <p style="color:black;font-size:18px;"class="sansserif">Get funding for your Startup from Top Investors</p>
+        <p style="color:black;font-size:15px;"class="serif">Find Strategic Investors, Manage your Fundraising and Close Deals on VCX.</p>
+        <p><a class="btn btn-primary btn-lg" href="{% url "register1" %}" role="button">Signup</a></p>
+      </div>
+      <div class="col-xs-2">
+        
+      </div>
+    </div>
+  </div>
+
+
+    <style>
+  
+
+.right {
+  position: absolute;
+  float: right;
+  right: -300px;
+  width: 700px;
+  border: 3px solid #73AD21;
+  padding: 186px;
+  background-size: cover;
+  background-image:linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url(/static/images/.jpg);
+  color: aliceblue;
+}
+
+.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+  
+  </style>
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8">
+        <div class="right">
+        <h1 style="color:blue;font-size:40px;" class="serif">I AM AN INVESTOR</h1>
+        <p style="color:black;font-size:18px;" class="sansserif">Invest in world's most promising Startups</p>
+        <p style="color:black;font-size:15px;" class="serif">Diversify your investment portfolio with unparalleled access to highly curated and personalized deal flow from India and beyond.</p>
+        <p><a class="btn btn-primary btn-lg" href="{% url "register" %}" role="button">Signup</a></p>
+      </div>
+      <div class="col-xs-2">
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

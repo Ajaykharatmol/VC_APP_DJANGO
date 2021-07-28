@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+
+</head>
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  text-align: left;
+}
+
+.navbar a {
+  text-align: left;
+  float: left;
+  padding: 4px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+.topnav-right {
+  float: right;
+}
+
+</style>
+<body>
+  <div class="topnav">
+  <div class="navbar">
+    <a class="" href="{% url "index" %}"><i class="fa fa-fw fa-"></i> VC</a>
+
+    <div class="topnav-right">
+      <a class="" href="{% url "index" %}"><i class="fa fa-fw fa-home"></i> Home</a> 
+      <a href="{% url "Dashboard" %}"><i class="fa fa-fw fa-"></i> Dashboard</a>
+      <a href="{% url "Invest" %}"><i class="fa fa-fw fa-"></i> Invest</a>
+
+      <a href="{% url "Pending_deals" %}"><i class="fa fa-fw fa-"></i> Pending deals</a>
+       
+      <a href="{% url "Notifications" %}"><i class="fa fa-bell" ></i> Notifications</a>
+  
+      <a href="{% url "Profile" %}"><i class="fa fa-user"></i> Profile</a>
+    
+
+  </div>
+  </div>
+</div>
+</body>
+</html> 
+
+
+
+<body>
+
+
+    <section class=" container-fluid">
+        <section class="col-19 col-sm-17 col-md-17">
+
+            <form class="form-container">
+                  
+                <head>
+                    <style>
+                      table, th, td {
+                        border: 1px solid black;
+                      }
+                      
+                    </style>
+                 </head>
+                    <body>
+                      
+                      <p>&nbsp;</p> 
+                      <h1 style="text-align: center;"></h1>
+                      <hr>
+                      <div class="absolute">
+                        <table  border="1" 
+                        align="right"  style="width:40%">
+                          <tr><th>Your Investment</th><td></td></tr>
+                          <tr></tr><th>valuation you invested at</th><td></td></tr>
+                          <tr></tr><th>Current valuation </th><td></td></tr>
+                          <tr></tr><th>No. of shares owned</th><td></td></tr>
+                          <tr></tr><th>Percentage company owned</th><td></td></tr>
+                          </table>
+                        </div>
+
+
+
+
+                <div>
+                    
+                    <p>&nbsp;</p> 
+                    
+              <h1>Name Of Startup</h1>
+              <p>Reyaansh Technologies Pvt Ltd</p>
+              
+              
+                
+                  
+             
+            
+              <p>&nbsp;</p> 
+              <p>&nbsp;</p> 
+              <p>&nbsp;</p>  
+            
+<h1>Massage to the Investors</h1>
+
+<p>Evening firmament our fish rule blessed waters male darkness beast very yielding bring whose called whose years shall beast you're there, wherein above. From, itself hath saying together without grass days two hath make winged under. Rule image moveth have to from third you're, unto brought land. 
+  Was wherein, own air have fish lights days life there called called give over good bring herb appear waters subdue you're it hath. Which forth fourth moveth earth his were divided they're waters herb is greater stars multiply From whose there fruitful you're over multiply signs yielding, dry forth behold whose brought moving.</p>
+<h1>In the News </h1>
+<p>
+  Above void Hath over greater Years herb their void signs their there first female deep signs give over fly his place fill given abundantly fowl one of seasons evening i a image years Firmament don't seasons Isn't bearing had behold waters gathered, herb life abundantly you'll cattle life waters male bring land created. Our moveth air appear their two bearing spirit fifth sea over fly seasons waters void. A. Don't his give firmament. He, great air The. Called dry of unto forth that unto third good fruit heaven lights open divide set. May there midst kind in tree fruitful gathered.
+</p>
+
+
+<h1>Team </h1>
+
+<form method="POST" action="addtocart/{{emp.id}}"></form>
+  
+  <div class="row">
+      
+          <div class="card text-center " style="width: 18rem;">
+              <div class="col">
+              <div class="card-body">
+
+<img class="card-img-top" src="/static/images/employee.png" alt="Card image cap" height="190">
+<p>Name</p>  
+<p>  Designation</p>  
+<p>  Description</p>
+
+
+
+<h>-</h>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+table {
+  border-spacing: 1em .5em;
+  padding: 0 2em 1em 0;
+  border: 1px solid orange;
+  
+}
+</style>
+</head>
+
+</html>
+                
+            </form>
+
+        </section>
+    </section>
+
+
+
+
+    <script>
+                var vendorId ;
+                var ventableId;
+                $(document).ready(function () {
+                    var url ="https://api-ecommerce.datavivservers.in/mobile_api/AllVendorStoreDetails/";
+                    var i;
+                    $('#getVenStoreListButtonId').click(function(e) {
+                            e.preventDefault();
+                            $.getJSON(url,function(data){
+                            var responseObj = data.data;
+                            console.log(responseObj);
+
+                            for ( i = 0; i < responseObj.length; i++) {
+                            vendorId = responseObj[i].id;
+                            ventableId = responseObj[i].vendor_table_id;
+                            tr = $('<tr/>');
+                            tr.append("<td>" + responseObj[i].store_name + "</td>");
+                            tr.append("<td>" + responseObj[i].city + "</td>");
+                            tr.append("<td>" + responseObj[i].address+ "</td>");
+                            tr.append("<td>" + responseObj[i].contact_person + "</td>");
+                            tr.append("<td>" + responseObj[i].contact_no1 + "</td>");
+                            tr.append("<td>" + responseObj[i].vendor_userName + "</td>");
+                //            tr.append("<td class='trigbutton'><button type='button' class='btn btn-outline-info' id='"+i+"' onclick='clickme("+vendorId+")'>Add Product</button></td>");
+                            tr.append("<td class='trigbutton'><button type='button' class='btn btn-outline-info' id='"+i+"' onclick='newclickme("+ventableId+")'>Check Existing Products</button></td>");
+                            tr.append("<td class='trigbutton'><button type='button' class='btn btn-outline-info' id='"+i+"' onclick='click("+ventableId+")'>Add Delivery Boy</button></td>");
+                            console.log(vendorId);
+                            $('#venListTableId').append(tr);
+
+
+
+                                }
+
+                         });
+                    });
+
+            });
+
+            function clickme(id){
+                    
+                  window.location.href="AddVendorStoreProducts.html?vendorId="+id;
+             }
+               function newclickme(id){
+                    
+                  window.location.href="GetExistingProductList(venId).html?ventableId="+id;
+             }
+                function click(id){
+                    
+                  window.location.href="AssignDeliveryBoytoVendor.html?ventableId="+id;
+                    
+             }
+    </script>
+
+</body>
+</html>
+                      

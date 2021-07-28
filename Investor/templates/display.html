@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="project">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="vinayak sharma">
+  
+    <title>{{title}}</title>
+  
+  
+    <!-- bootstrap file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- bootstrap file-->
+  
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+    <!-- main css -->
+    <link rel="stylesheet" type="text/css" href="{% static "For_Investers.css" %}" />
+  
+  
+    
+     <style>
+    body{
+      padding: 0px;
+      margin: 0px;
+      background-image:linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url(/static/images/3.jpg);
+      background-size: cover;
+      background-color: ; 
+    }
+  </style>
+  </head>
+
+  <body class="container-fluid">
+<header class="row">
+  
+      <!-- navbar-->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" class="styleheader" href="{% url "index" %}">VCX</a>
+          </div>
+          <div class="collapse navbar-collapse" id="mainNavBar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="{% url "index" %}">Home</a></li>
+  
+              {% if Investor.is_authenticated %}
+              <li><a href="{% url "logout" %}"><span class="glyphicon glyphicon-log-out"></span> &nbsp; Logout</a></li>
+             
+              {% endif %}
+  
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br/>
+   
+  </body>
+
+  <head>
+            <style>
+              table, th, td {
+                border: 2px solid black;
+              }
+            </style>
+         </head>
+            <body>
+              <h>sdaa</h>
+              <p>&nbsp;</p> 
+              <h1 style="text-align: center;">My Portfoliao</h1>
+              <hr>
+              
+         <p>Days make creepeth, image isn't said that. Kind. Hath he. Doesn't signs cattle there and gathering earth beginning said moving life after male can't don't their were life meat lesser saying. Our green, own grass, tree above creeping darkness third fowl. Whales hath him. Kind him bring in, of. Dominion can't midst stars, living face, fowl you whales firmament moveth abundantly a thing fill darkness you're without abundantly creepeth fill gathered to divided subdue of creeping you, life upon had firmament herb of darkness midst dominion. Green. Saying said isn't Void together stars creeping. Gathering spirit fish. Yielding were said.</p>
+         <p>&nbsp;</p> 
+         <h1>Dashboard</h1>
+         <p>&nbsp;</p>   
+         <table>
+              <tr>
+                <th></th>
+                
+                <th>Amount invested</th>
+                <th>Percentage of company</th>
+                <th>Type of shares</th>
+                <th>No of shares</th>
+                <th>Current value</th>
+                <th>Profit or loss on investment</th>
+               
+                <th></th>
+              </tr>
+              <tr>
+              {% for d in emp %}
+
+ <td height="100",col width="150">{{d.id}}</td>
+  <td height="100",col width="150">{{d.Total_amount_to_invest}}</td>
+  <td height="100",col width="150">{{d.Percentage_of_company}}</td>
+  <td height="100",col width="150">{{d.Type_of_shares}}</td>
+  <td height="100",col width="150">{{d.No_of_shares}}</td>
+  <td height="100",col width="150">{{d.Price_per_share}}</td>
+  <td height="100",col width="150">{{d.Pre_money_valuation}}</td>
+  <td height="100",col width="150"><a href="View_Startup">Startup</a></td>
+                 </tr>
+                {% endfor%}
+              </table>
+          </body>
+            </html>
